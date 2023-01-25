@@ -23,6 +23,8 @@ li{
   margin-top: 10px;
   text-align: center;
   background-color: peachpuff;
+  width: 300px;
+  margin-left: 900px;
 }
 h2 {
   width: 100%; 
@@ -59,7 +61,7 @@ h2 span {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 280px;
+  margin-left: 900px;
 }
 .title-section{
   margin-top: 10px;
@@ -71,11 +73,11 @@ h2 span {
   border-style: solid;
   width: 300px;
   text-align: center;
-  margin-left: 280px;
+  margin-left: 900px;
 }
 
 .back-button{
-  margin-left: 40px;
+  margin-left: 540px;
 }
 .footer{
   position: fixed;
