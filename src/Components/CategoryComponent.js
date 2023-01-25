@@ -1,15 +1,26 @@
 import '../App.css';
-import React from "react";
-class CategoryComponent extends React.Component {
-    render() {
+import React, { useEffect } from "react";
+import SearchComponent from './SearchComponent';
+
+function CategoryComponent({selectedCategory}) {
+  useEffect(() => {
+  },[selectedCategory]);
         return(
       <>
-      { <h2><span key={this.props.selectedCategory}>
-       {this.props.selectedCategory}
-       </span></h2>
+       <SearchComponent/>
+
+      { 
+      <h2>
+        <span>
+          {selectedCategory}
+        </span>
+       </h2>
        }
-        </>);
-    }
+
+      </>);
+    
   }
 
 export default CategoryComponent;
+
+

@@ -1,20 +1,21 @@
 import CategoryComponent from "./CategoryComponent";
+import React, { useEffect,useState } from "react";
+
 function  ItemMenu  ({drinks}) {
-  const myFunction = (selectedCategory) => {
-        console.log('ItemMenu '+selectedCategory.drinksObj.strCategory);
-        return(
-            <>
-            <CategoryComponent selectedCategory={selectedCategory.drinksObj.strCategory}/>
-            </>
-        )
-    } 
+  const [itemClicked, setItemClicked] = useState('');
+
+
+    useEffect(() => {
+    })
     return (
         <>
           {drinks && drinks.length > 0 && drinks.map((drinksObj, index) => (
             <li key={drinksObj.strCategory}>
-                <button onClick={() => myFunction({drinksObj})}>{drinksObj.strCategory}</button>
+                <button onClick={() => setItemClicked(drinksObj.strCategory)}>{drinksObj.strCategory}</button>
             </li>
           ))}
+          <CategoryComponent selectedCategory={itemClicked}/>
+
        </>
     );
 
