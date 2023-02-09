@@ -19,13 +19,12 @@ function App() {
   },[])
   return (
     <>
-    
     <HeaderComponent/>
     <MenuComponent drinks={drinks}/>
     <FooterComponent/>
-
     </>
   );
+  
 }
 
 export default App;

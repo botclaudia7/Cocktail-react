@@ -8,7 +8,7 @@ function CategoryComponent({selectedCategory}) {
         return(
       <>
        <SearchComponent/>
-
+ 
       { 
       <h2>
         <span>
@@ -16,7 +16,6 @@ function CategoryComponent({selectedCategory}) {
         </span>
        </h2>
        }
-
       </>);
     
   }

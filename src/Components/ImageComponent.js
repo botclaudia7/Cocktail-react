@@ -6,7 +6,6 @@ function ImageComponent({selectedImage,selectedCategory}) {
   const [isShow, setIsShow] = useState(true);
 
   const handleClick = () => {
-    console.log(isShow);
     setIsShow(!isShow);
   };
 

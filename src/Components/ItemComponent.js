@@ -3,7 +3,6 @@ import ImageComponent from './ImageComponent';
 import React, { useEffect, useState } from "react";
 
 function ItemComponent({selectedCategory}) {
-    console.log(selectedCategory);
     useEffect(() => {
     },[selectedCategory]);
 
@@ -24,12 +23,10 @@ function ItemComponent({selectedCategory}) {
     const [selectedImage, setItemClicked] = useState('');
     const [isShow, setIsShow] = React.useState(true);
     const handleClick = (categoryObj,isShow) => {
-        console.log(isShow);
         setItemClicked(categoryObj);
         setIsShow(!isShow);
       };
-    useEffect(() => {
-    })
+    useEffect(() => {});
     if (isShow)   {
         return (
             <>
