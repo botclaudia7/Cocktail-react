@@ -1,6 +1,6 @@
 import '../App.css';
 import React, { useState } from "react";
-import ItemComponent from './ItemComponent';
+import ItemComponent from './ItemCategoryComponent';
 
 function ImageComponent({selectedImage,selectedCategory}) {
   const [isShow, setIsShow] = useState(true);
