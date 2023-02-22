@@ -1,11 +1,8 @@
 import '../App.css';
 
-import React, { useEffect } from "react";
-
-const CocktailTemplate = (cocktailData)  =>{
+const CocktailTemplate = ({cocktailData})  =>{
   console.log("intemp");
-    useEffect(() => {
-    });
+
     return (
         <>
         <div className='new-cocktail' name='main-div'>

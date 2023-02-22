@@ -2,9 +2,9 @@ import '../App.css';
 import CategoryComponent from "./CategoryComponent";
 import ItemCategoryComponent from './ItemCategoryComponent';
 
-import React, { useEffect,useState } from "react";
+import React, { useState } from "react";
 import NewCocktail from './NewCocktail';
-import CocktailTemplate from './CocktailTemplate';
+// import CocktailTemplate from './CocktailTemplate';
 
 function MenuComponent({drinks}) {
     const [selectedItem, setItemClicked] = useState('');
@@ -15,17 +15,14 @@ function MenuComponent({drinks}) {
       const handleClick2 = (childData) => {
         console.log(childData); 
         setIsShow(!isShow);
-        displayCreatedCocktail(childData);    
+        // return(
+        //     <>
+        //     <CocktailTemplate cocktail={childData}/>
+        //     </>
+        // ); 
       };
-    const displayCreatedCocktail =(cocktailData)=>{
-        return(
-            <>
-            <CocktailTemplate/>
-            </>
-        );
-    };
-    useEffect(() => {
-    })
+ 
+
     if(isShow)
     {
             return (
@@ -35,12 +32,12 @@ function MenuComponent({drinks}) {
             <li key={drinksObj.strCategory}>
                 <button onClick={() => setItemClicked(drinksObj.strCategory)}>{drinksObj.strCategory}</button>
             </li>
-        ))}
+        ))
+        }
     </ul>
     <CategoryComponent selectedCategory={selectedItem}/>
     <button  onClick={() =>handleClick(true) }>Create Cocktail</button>
     <ItemCategoryComponent  selectedCategory={selectedItem}/>   
-
     </> );
     }
     else

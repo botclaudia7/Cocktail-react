@@ -1,6 +1,5 @@
 import '../App.css';
 import React, { useState } from "react";
-import ItemComponent from './ItemCategoryComponent';
 const SearchComponent = () =>{
     const [message, setMessage] = useState('');
     const [category, setCategory] = useState([]);
@@ -15,10 +14,11 @@ const SearchComponent = () =>{
             setTimeout(() => {
                 fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + text)
                 .then((response) => response.json())
-                .then((data) => setCategory(data.drinks));
+                .then((data) => setCategory(data.drinks))
+                .catch((err) => console.log(err));
             }, 1000);
         }
-
+        
    return (
         <>
                 <input className='search-item' type="text"
@@ -36,7 +36,7 @@ const SearchComponent = () =>{
                          <div className='title-section' key={categoryObj.strDrinkThumb}>{categoryObj.strDrink}</div>        
                     </div>
                 ))}
-                    {/* <ItemComponent  selectedCategory={category}/>    */}
+                   
 
 
        </>

@@ -1,8 +1,5 @@
 import '../App.css';
-
-import React, { useEffect } from "react";
-
-const NewCocktail = (props)  =>{
+function NewCocktail (props) {
   const handleClick= (event) =>{
         event.preventDefault();
         console.log(event.target.parentNode.cocktailName.value);
@@ -15,8 +12,6 @@ const NewCocktail = (props)  =>{
           event.target.parentNode.cocktailQty.value];
         props.cocktailcreated(arrayItems);
       };
-    useEffect(() => {
-    })
     return (
         <>
         <div className='new-cocktail' name='main-div'>

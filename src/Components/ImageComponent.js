@@ -9,23 +9,21 @@ function ImageComponent({selectedImage,selectedCategory}) {
     setIsShow(!isShow);
   };
 
-    if (isShow)   {
       return (
-          <>
-                    <div  className='title-drink' key={selectedImage.strDrinkThumb}>{selectedImage.strDrink}</div>        
+          <>{
+            isShow?
+             <>
+               <div  className='title-drink' key={selectedImage.strDrinkThumb}>{selectedImage.strDrink}</div>        
                     <img  className='image-drink' alt={selectedImage.strDrink} id={selectedImage.idDrink} src={selectedImage.strDrinkThumb}/> 
                     <button className='back-button' onClick={handleClick}>Back</button>
+              </>
+            :
+            <ItemComponent selectedCategory={selectedCategory} />
+          }
            </>
       );  
       
-    }else
-      {
-          return (
-          <>
-              <ItemComponent selectedCategory={selectedCategory} />
-          </>
-        );
-      }
+    
     
 }
 
