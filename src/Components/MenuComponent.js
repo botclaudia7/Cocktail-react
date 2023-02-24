@@ -1,6 +1,6 @@
 import '../App.css';
 import CategoryComponent from "./CategoryComponent";
-import ItemCategoryComponent from './ItemCategoryComponent';
+// import ItemCategoryComponent from './ItemCategoryComponent';
 
 import React, { useState } from "react";
 import NewCocktail from './NewCocktail';
@@ -37,7 +37,7 @@ function MenuComponent({drinks}) {
            </ul>
            <button  onClick={() =>handleClick(true) }>Create Cocktail</button>
         <CategoryComponent selectedCategory={selectedItem}/>
-        <ItemCategoryComponent  selectedCategory={selectedItem}/>   
+        {/* <ItemCategoryComponent  selectedCategory={selectedItem}/>    */}
     </> );
     }
     else
