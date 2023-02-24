@@ -28,16 +28,16 @@ function MenuComponent({drinks}) {
             return (
             <>
             <ul className='menu'>
-        {drinks && drinks.length > 0 && drinks.map((drinksObj) => (
-            <li key={drinksObj.strCategory}>
-                <button onClick={() => setItemClicked(drinksObj.strCategory)}>{drinksObj.strCategory}</button>
-            </li>
-        ))
-        }
-    </ul>
-    <CategoryComponent selectedCategory={selectedItem}/>
-    <button  onClick={() =>handleClick(true) }>Create Cocktail</button>
-    <ItemCategoryComponent  selectedCategory={selectedItem}/>   
+              {drinks && drinks.length > 0 && drinks.map((drinksObj) => (
+              <li key={drinksObj.strCategory}>
+                  <button onClick={() => setItemClicked(drinksObj.strCategory)}>{drinksObj.strCategory}</button>
+              </li>
+              ))
+              }
+           </ul>
+           <button  onClick={() =>handleClick(true) }>Create Cocktail</button>
+        <CategoryComponent selectedCategory={selectedItem}/>
+        <ItemCategoryComponent  selectedCategory={selectedItem}/>   
     </> );
     }
     else

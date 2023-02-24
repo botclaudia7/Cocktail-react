@@ -36,7 +36,7 @@ function CategoryComponent({selectedCategory}) {
             </span>
           </h2>
             {category && category.length > 0 && category.map((categoryObj) => (
-                    
+                              // <!--search display items-->
                     <div className='items' key={categoryObj.idDrink}>
                         <img  className='image-section' key={categoryObj.idDrink} alt={categoryObj.strDrink} src={categoryObj.strDrinkThumb}/> 
                          <div className='title-section' key={categoryObj.strDrinkThumb}>{categoryObj.strDrink}</div>        

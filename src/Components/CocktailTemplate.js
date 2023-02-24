@@ -1,7 +1,7 @@
 import '../App.css';
 
 const CocktailTemplate = ({cocktailData})  =>{
-  console.log("intemp");
+  console.log("in temp");
 
     return (
         <>
